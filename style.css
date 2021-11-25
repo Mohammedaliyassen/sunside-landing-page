@@ -30,7 +30,12 @@ header ul li {
     font-size: 20px;
     cursor: pointer;
 }
-
+.hamburger{
+    visibility: hidden;
+}
+.arrow{
+    transform: translateX(44.5vw);
+}
 header .title{
     text-align: center;
     color: white;
@@ -46,7 +51,7 @@ header .title{
     color: black;
     padding: 15px 30px;
     border-radius: 50px;
-    transition: .5s;
+    transition: 0;
 }
 .list-contact:hover {
     background-color: #6eceff;
@@ -66,7 +71,7 @@ header .logo{
 li a {
     text-decoration: none;
     color: white;
-    transition: .5s;
+    transition: 0;
 }
 .stay{
     z-index: 1000;
@@ -118,13 +123,17 @@ li a {
     padding: 0;
     text-align: center;
 }
+.more::after{
+position: absolute;
+width: 100px;
+height: 100px;
+}
 .projects .photography p , .projects .photography h1 , .projects .graphic p, .projects .graphic h1{
     position: relative;
     top: 400px;
     margin: auto;
     width: 344px;
 } 
-/* مسببين مشاكل في التصميم بسبب المارجين و الاماكن بتاعتهم  */
 .first-project{
     display: inline-block;
     width: 50%;
@@ -143,6 +152,7 @@ li a {
     position: relative;
     left: 38%;
     display: inline-block;
+    color: #9d9d9d;
 }
 .about img {
     border-radius: 50%;
@@ -156,10 +166,11 @@ li a {
     margin: 60px 0;
     font-size: 18px;
     line-height: 2;
+    color: #606060;
 }
 .about .jop{
     margin: 10px;
-    
+    color: #9b9b9b;
     font-size: 15px;
 }
 /* -------------------------- */
@@ -196,4 +207,172 @@ footer .logo{
 .Contact img{
     margin-left: 20px;
     cursor: pointer;
+}
+/* -------------------------------------- */
+
+@media (max-width:900px){
+    .hamburger{
+        visibility: visible;
+        position: absolute;
+        left: 75%;
+        top: 50%;
+        }
+    .list-contact{
+        background-color: yellow;
+    }
+    header ul {
+        background-color: white;
+        display: flex;
+        flex-wrap: wrap;
+        width: 50%;
+        position: fixed;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        height: 35%;
+        left: 25%;
+        top: 10%;
+        visibility: hidden;
+        transition: 0;
+    }
+    header ul li a {
+        color: #4c9081;
+        transition: 0;
+    }
+    header{
+        height: 550px;
+    }
+    header .title{
+        font-size: 40px;
+        margin-top: 70px;
+    }
+    .arrow{
+        transform: translateX(45.5vw);
+    }
+    header ul li {
+        margin: 10px;
+        transition: 0;
+    }
+    .projects div {
+        height: 440px;
+    }
+    .projects h1 {
+        margin: 0px 0;
+        font-size: 35px;
+    }
+    .projects p {
+        margin: 10px 0;
+        line-height: 1.5;
+    }
+    .projects .photography p , .projects .photography h1 , .projects .graphic p, .projects .graphic h1{
+        position: relative;
+        top: 274px;
+        margin: auto;
+        width: 344px;
+        margin-bottom: 20px;
+    }
+    .projects .photography, .projects .graphic{
+        height: 440px;
+    }
+    .about div p {
+        font-size: 15px;
+    }
+}
+@media (max-width:550px){
+    .projects .photography p, .projects .photography h1, .projects .graphic p, .projects .graphic h1{
+        width: 100%;
+    }
+    .ulist{
+        visibility: visible;
+    }
+    header ul {
+        visibility: hidden;
+    }
+    .projects div {
+        height: 320px;
+        width: 100%;
+        padding: 20px;
+        padding-top: 75px;
+        text-align: center;
+    }
+    .arrow{
+        transform: translateX(40.5vw);
+    }
+    .projects h1 {
+        font-size: 20px;
+    }
+    .projects img {
+        width: 100%;
+    }
+    .projects p {
+        margin: 5px 0;
+        line-height: 1.4;
+        font-size: 14px;
+    }
+    .aboutTitle{
+        left: 10%;
+        letter-spacing: 3px;
+        font-size: 25px;
+    }
+    .projects .photography, .projects .graphic{
+        width: 100%;
+    }
+    .about{
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        margin: 30px;
+    }
+    .about div {
+        width: auto;
+        margin: 0px;
+        margin-bottom: 100px;
+    }
+    .lastImg{
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .lastImg img{
+        width: 50%;
+    }
+    .about div p {
+        font-size: 15px;
+        margin: 30px 0;
+    }
+    .about div {
+        margin-bottom: 30px;
+    }
+    header .title {
+        font-size: 40px;
+        text-align: center;
+        margin: 0;
+        margin-top: 75px;
+        margin-bottom: 45px;
+    }
+    footer ul li{
+        margin: 20px;
+    } 
+    footer ul {
+        width: 177%;
+        transform: translatex(-20%);
+    } 
+    .Contact{
+        margin: 40px;
+    }
+    .Contact img {
+        margin-left: 5px;
+    }
+    .projects .graphic {
+        background: url('images/desktop/image-graphic-design.jpg') no-repeat center;
+        background-size: cover;
+    }
+    footer .footerList a{
+        color: #4c9081;
+    }
+    .hamburger{
+    visibility: visible;
+    position: absolute;
+    left: 75%;
+    top: 50%;
+    }
 }
