@@ -1,3 +1,5 @@
 document.getElementById('ham').addEventListener('click',()=>{
-    document.getElementById('open').classList.toggle('ulist');
+    document.querySelector('.open').classList.toggle('ulist');
 })
+
+console.log(document.querySelector('.open'))
